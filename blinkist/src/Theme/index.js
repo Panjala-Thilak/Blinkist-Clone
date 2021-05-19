@@ -106,6 +106,10 @@ const baseTheme = createMuiTheme({
           color:"#FFFFFF",
           backgroundColor:" #0365F2"
         }
+      },
+      containedSizeSmall:{
+        padding:"11px 10px",
+        fontWeight:"bold"
       }
       
     },
