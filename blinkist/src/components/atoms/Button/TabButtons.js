@@ -2,7 +2,7 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 
 
-export default function CustomizedButtons({variant,color,name,onClick,endIcon}) {
+export default function TabButtons({variant,color,name,onClick,endIcon}) {
 
   return (
       

@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from '../../molecules/Card/card'
+import Card from '../../molecules/Card/MediaCard'
 import Grid from '@material-ui/core/Grid'
 
 const BooksCollection = ({buttonName,books,libraryBooks,status,onClick}) => {

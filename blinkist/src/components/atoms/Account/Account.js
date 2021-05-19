@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const LetterAvatars=({firstName,lastName})=> {
+const Account=({firstName,lastName})=> {
   const classes = useStyles();
     const DisplayName = firstName[0]+lastName[0];
   return (
@@ -31,4 +31,4 @@ const LetterAvatars=({firstName,lastName})=> {
   );
 }
 
-export default LetterAvatars;
+export default Account;

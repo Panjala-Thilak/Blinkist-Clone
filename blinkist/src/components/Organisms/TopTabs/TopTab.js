@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import Button from '../../atoms/Button/TabButtons';
 import Menu from '../Menu/CustomizedMenu'
-import Form from '../Form/form'
-import CustomizedTabs from '../Tabs/tabs';
+import Form from '../Form/CustomForm'
+import CustomizedTabs from '../Tabs/CustomizedTabs';
 import Logo from '../../atoms/Logo/logo';
 import { AppBar, Container, Toolbar } from '@material-ui/core';
-import SearchIcon from '../../atoms/serach/serach'
+import SearchIcon from '../../atoms/serach/SearchIcon'
 import TextField from '../../atoms/Input/CustomInput'
 import LoginButton from '../Login/LoginButton';
 import Profile from '../Profile/profile';
   
-export default function ButtonAppBar() {
+export default function TopTabs() {
 
   const [value,setValue]=useState(0);
   const [searchValue,setSearchValue]=useState('')
@@ -36,7 +36,9 @@ export default function ButtonAppBar() {
     setSearchValue('');
     }
     else
+    {
     setValue(2);
+    }
   }
 
   const searchNew=(val)=>{

@@ -1,5 +1,5 @@
 import React from 'react';
-import Form from './form';
+import Form from './CustomForm';
 
 export default {
     title: 'Organisms/Form',

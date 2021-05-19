@@ -1,7 +1,6 @@
 import { Save } from '@material-ui/icons';
 import React from 'react';
-import CustomButton from './Button';
-import CustomMenuButton from './MenuButton';
+import CustomButton from './CustomButton';
 
 export default {
     title: 'atoms/CustomButton',
@@ -27,16 +26,5 @@ Primary.args = {
 };
 
 
-const Template1 = (args) => <CustomMenuButton {...args} />;
-
-export const CustomizedButton = Template1.bind({});
-
-CustomizedButton.args = {
-    color: "primary",
-    variant: "outlined",
-    label:"click me",
-    
-    icon:<Save />
-};
 
 

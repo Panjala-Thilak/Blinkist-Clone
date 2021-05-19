@@ -6,7 +6,7 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
-import CustomButton from '../../atoms/Button/Button';
+import CustomButton from '../../atoms/Button/CustomButton';
 import TimeIcon from '@material-ui/icons/AccessTime'
 import { ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
 

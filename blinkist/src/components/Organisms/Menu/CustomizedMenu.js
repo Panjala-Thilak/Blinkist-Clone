@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import Button from '../../atoms/Button/TabButtons';
-import CustomMenuButton from '../../atoms/Button/TabButtons';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import { Grid, ListItem, ListItemIcon } from '@material-ui/core';
@@ -48,9 +47,13 @@ export default function CustomizedMenu({parentMenuFunction}) {
 
   const toggle=()=>{
     if(expand===0)
+    {
     setExpand(1);
+    }
     else
+    {
     setExpand(0);
+    }
   }
   const handleClick = (event) => {
     
@@ -90,7 +93,7 @@ export default function CustomizedMenu({parentMenuFunction}) {
                     <StyledMenuItem onClick={handleClose}>
                         <ListItem >
                           <ListItemIcon><FontAwesomeIcon icon={faRocket} /></ListItemIcon>
-                          <CustomMenuButton name="Entrepreneurship" onClick={()=>search("Entrepreneurship")}></CustomMenuButton>
+                          <Button name="Entrepreneurship" onClick={()=>search("Entrepreneurship")}></Button>
                         </ListItem>
                     </StyledMenuItem>
             </Grid> 
@@ -98,7 +101,7 @@ export default function CustomizedMenu({parentMenuFunction}) {
                     <StyledMenuItem onClick={handleClose}>
                         <ListItem >
                             <ListItemIcon><FontAwesomeIcon icon={faLandmark} /></ListItemIcon>
-                            <CustomMenuButton name="Politics" onClick={()=>search("Politics")}></CustomMenuButton>
+                            <Button name="Politics" onClick={()=>search("Politics")}></Button>
                         </ListItem>
                     </StyledMenuItem>
                     </Grid>
@@ -106,7 +109,7 @@ export default function CustomizedMenu({parentMenuFunction}) {
                     <StyledMenuItem onClick={handleClose}>
                         <ListItem >
                             <ListItemIcon><FontAwesomeIcon icon={faFlask} /></ListItemIcon>
-                            <CustomMenuButton name="Science" onClick={()=>search("Science")}></CustomMenuButton>
+                            <Button name="Science" onClick={()=>search("Science")}></Button>
                         </ListItem>
                     </StyledMenuItem>
                     </Grid>
@@ -114,7 +117,7 @@ export default function CustomizedMenu({parentMenuFunction}) {
                     <StyledMenuItem onClick={handleClose}>
                         <ListItem >
                             <ListItemIcon><FontAwesomeIcon icon={faGraduationCap} /></ListItemIcon>
-                            <CustomMenuButton name="Education" onClick={()=>search("Education")}></CustomMenuButton>
+                            <Button name="Education" onClick={()=>search("Education")}></Button>
                         </ListItem>
                     </StyledMenuItem>
                     </Grid>
@@ -122,7 +125,7 @@ export default function CustomizedMenu({parentMenuFunction}) {
                     <StyledMenuItem onClick={handleClose}>
                         <ListItem >
                             <ListItemIcon><FontAwesomeIcon icon={faGlobeAsia} /></ListItemIcon>
-                            <CustomMenuButton name="Economics" onClick={()=>search("Economics")}></CustomMenuButton>
+                            <Button name="Economics" onClick={()=>search("Economics")}></Button>
                         </ListItem>
                     </StyledMenuItem>
                     </Grid>
@@ -130,7 +133,7 @@ export default function CustomizedMenu({parentMenuFunction}) {
                     <StyledMenuItem onClick={handleClose}>
                         <ListItem >
                             <ListItemIcon><FontAwesomeIcon icon={faLightbulb} /></ListItemIcon>
-                            <CustomMenuButton name="Motivation"  onClick={()=>search("Motivation")}></CustomMenuButton>
+                            <Button name="Motivation"  onClick={()=>search("Motivation")}></Button>
                         </ListItem>
                     </StyledMenuItem>
                     </Grid>
@@ -138,7 +141,7 @@ export default function CustomizedMenu({parentMenuFunction}) {
                       <StyledMenuItem onClick={handleClose}>
                           <ListItem >
                               <ListItemIcon><FontAwesomeIcon icon={faHeartbeat} /></ListItemIcon>
-                              <CustomMenuButton name="Health" onClick={()=>search("Health")}></CustomMenuButton>
+                              <Button name="Health" onClick={()=>search("Health")}></Button>
                           </ListItem>
                       </StyledMenuItem>
                     </Grid>
@@ -146,7 +149,7 @@ export default function CustomizedMenu({parentMenuFunction}) {
                       <StyledMenuItem onClick={handleClose}>
                           <ListItem >
                               <ListItemIcon><FontAwesomeIcon icon={faComment} /></ListItemIcon>
-                              <CustomMenuButton name="Communcation skills" onClick={()=>search("Communcation skills")}></CustomMenuButton>
+                              <Button name="Communcation skills" onClick={()=>search("Communcation skills")}></Button>
                           </ListItem>
                       </StyledMenuItem>
                     </Grid>
@@ -154,7 +157,7 @@ export default function CustomizedMenu({parentMenuFunction}) {
                       <StyledMenuItem onClick={handleClose}>
                           <ListItem >
                               <ListItemIcon><FontAwesomeIcon icon={faHeart} /></ListItemIcon>
-                              <CustomMenuButton name="Relationships" onClick={()=>search("Relationships")}></CustomMenuButton>
+                              <Button name="Relationships" onClick={()=>search("Relationships")}></Button>
                           </ListItem>
                       </StyledMenuItem>
                     </Grid>
