@@ -1,6 +1,6 @@
 
 import React from 'react';
-import CustomInput from './input';
+import CustomInput from './CustomInput';
 
 export default {
     title: 'atoms/CustomInput',

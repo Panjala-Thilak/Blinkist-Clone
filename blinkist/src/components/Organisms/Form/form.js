@@ -1,7 +1,6 @@
-import { useState } from 'react'
+import React,{ useState } from 'react'
 import CustomButton from '../../atoms/Button/TabButtons'
-import CustomInput from '../../atoms/Input/input'
-import React from "react";
+import CustomInput from '../../atoms/Input/CustomInput'
 import { withStyles } from "@material-ui/core/styles";
 import Dialog from "@material-ui/core/Dialog";
 import MuiDialogTitle from "@material-ui/core/DialogTitle";

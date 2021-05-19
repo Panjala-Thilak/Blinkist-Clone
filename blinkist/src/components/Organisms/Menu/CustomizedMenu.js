@@ -41,7 +41,7 @@ const StyledMenuItem = withStyles((theme) => ({
   },
 }))(MenuItem);
 
-export default function CustomizedMenus({parentMenuFunction}) {
+export default function CustomizedMenu({parentMenuFunction}) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [expand,setExpand] = useState(0);
  

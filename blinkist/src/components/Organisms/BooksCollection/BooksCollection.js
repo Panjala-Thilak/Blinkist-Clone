@@ -2,7 +2,7 @@ import React from 'react';
 import Card from '../../molecules/Card/card'
 import Grid from '@material-ui/core/Grid'
 
-const BookCollection = ({buttonName,books,libraryBooks,status,onClick}) => {
+const BooksCollection = ({buttonName,books,libraryBooks,status,onClick}) => {
     console.log(buttonName,books);
     // eslint-disable-next-line array-callback-return
     console.log(books,libraryBooks)
@@ -44,4 +44,4 @@ const BookCollection = ({buttonName,books,libraryBooks,status,onClick}) => {
    );
 }
 
-export default BookCollection;
+export default BooksCollection;

@@ -1,5 +1,5 @@
 import React from 'react';
-import Menu from './Menu';
+import Menu from './CustomizedMenu';
 
 export default {
     title: 'Organisms/Menu',
