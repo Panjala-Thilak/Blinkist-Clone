@@ -10,7 +10,7 @@ import TextField from '../../atoms/Input/CustomInput'
 import LoginButton from '../Login/LoginButton';
 import Profile from '../Profile/profile';
   
-export default function TopTabs() {
+export default function TopTab() {
 
   const [value,setValue]=useState(0);
   const [searchValue,setSearchValue]=useState('')
