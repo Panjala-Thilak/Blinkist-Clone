@@ -29,8 +29,8 @@ export default function TopTabs() {
 
 
 
-  const toggle=(value)=>{
-    if(value===2)
+  const toggle=(val)=>{
+    if(val===2)
     {
     setValue(0);
     setSearchValue('');

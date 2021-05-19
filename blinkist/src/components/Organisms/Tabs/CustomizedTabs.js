@@ -68,8 +68,8 @@ const CustomizedTabs=({searchValue,exploreStatus}) =>{
     fetchAllBooks();
   }, [])
 
-  const search=(id,books)=>{
-    for (var i=0; i < books.length; i++) {
+  const search=(id,resultBooks)=>{
+    for (var i=0; i < resultBooks.length; i++) {
         if (books[i].id === id) {
             return i;
         }
@@ -148,7 +148,9 @@ const CustomizedTabs=({searchValue,exploreStatus}) =>{
     result = searchBooks(books);
   }
   else
+  {
     result = searchBooks(libraryBooks);
+  }
 
   return (
     <React.Fragment>
