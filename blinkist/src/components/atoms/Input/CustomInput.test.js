@@ -1,9 +1,8 @@
 import React from 'react'
 import Input from './CustomInput';
-import { fireEvent, render } from '@testing-library/react'
+import { cleanup, fireEvent, render } from '@testing-library/react'
 
-
-
+afterEach(cleanup)
 
 describe('checking the textfield', () => {
     const handleChange = jest.fn();

@@ -1,5 +1,5 @@
 import './App.css';
-import TopTabs from './components/Organisms/TopTabs/TopTab'
+import TopTabs from './components/organisms/TopTabs/TopTab'
 import Container from '@material-ui/core/Container';
 import { ThemeProvider } from '@material-ui/styles';
 import responsiveFontTheme from './Theme/index'

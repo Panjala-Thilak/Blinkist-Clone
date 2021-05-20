@@ -1,8 +1,9 @@
 import React from 'react';
 import SearchIcon from './SearchIcon'
 
-import { fireEvent, render } from '@testing-library/react'
+import { cleanup, fireEvent, render } from '@testing-library/react'
 
+afterEach(cleanup)
 
 describe('Search Icon', () => {
 

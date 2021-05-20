@@ -69,7 +69,6 @@ export default function CustomizedMenu({parentMenuFunction}) {
   const search=(value)=>{
     console.log(value);
     parentMenuFunction(value);
-    console.log("last");
   }
   
   return (

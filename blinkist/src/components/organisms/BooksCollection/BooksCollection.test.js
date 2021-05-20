@@ -1,5 +1,5 @@
 import React from 'react'
-import { render, screen } from '@testing-library/react'
+import { cleanup, fireEvent, render, screen } from '@testing-library/react'
 import BooksCollection from './BooksCollection'
 
 let allBooks=[
@@ -42,6 +42,7 @@ let allLibraryBooks=[
         "status": true
       }
 ]
+afterEach(cleanup)
 
 describe('The BookCollection Testing', () => {
     const handleClick = jest.fn();
@@ -54,7 +55,7 @@ describe('The BookCollection Testing', () => {
                 status={true}
                 onClick={handleClick}/>)
          expect(screen.getByText('The Pegan Diet')).toBeInTheDocument();
-        //  fireEvent.click();
-        //  expect(handleClick).toHaveBeenCalledTimes(1);
+         expect(screen.queryByText("The Bully Pulpit")).toBeNull()
+        fireEvent.click(screen.getByText(/Finished/i))
      })
 })

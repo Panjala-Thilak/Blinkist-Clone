@@ -206,7 +206,7 @@
       "category": "Politics",
       "time": "15",
       "image": "https://images.blinkist.com/images/books/609901436cee0700077e6675/1_1/470.jpg",
-      "status": true,
+      "status": false,
       "id": 15
     },
     {
@@ -214,7 +214,7 @@
       "author": "Scoot Galloway",
       "category": "Economics",
       "time": "12",
-      "status": true,
+      "status": false,
       "image": "https://images.blinkist.com/images/books/6007f93c6cee070007a81d3f/1_1/250.jpg",
       "id": 17
     },

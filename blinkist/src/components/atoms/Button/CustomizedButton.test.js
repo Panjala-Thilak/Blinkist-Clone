@@ -1,8 +1,9 @@
 import React from 'react';
 import Button from './CustomButton'
 
-import { fireEvent, render, screen} from '@testing-library/react'
+import { cleanup, fireEvent, render, screen} from '@testing-library/react'
 
+afterEach(cleanup)
 
 describe('App', () => {
     test('check the buttom name', () => {

@@ -120,7 +120,7 @@ const CustomizedTabs=({searchValue,exploreStatus}) =>{
 
   var resultFilter = [];
   const searchBooks = (booksData) =>{
-    console.log(searchValue);
+    
     if(booksData)
     {
       if(searchValue!=='' && searchValue){
@@ -140,21 +140,20 @@ const CustomizedTabs=({searchValue,exploreStatus}) =>{
     return resultFilter;
   }
 
-  var result,valueState=0;
+  var result;
   if(exploreStatus)
   {
-    valueState=1;
-    console.log("helloooooo",valueState);
     result = searchBooks(books);
   }
   else
+  {
     result = searchBooks(libraryBooks);
+  }
 
   return (
     <React.Fragment>
     { (!exploreStatus) &&
     <Paper square elevation={0}>
-      {console.log(valueState)}
       <React.Fragment>
         <div>
         <Typography variant="h4" component="h4">My Library</Typography>
@@ -173,7 +172,7 @@ const CustomizedTabs=({searchValue,exploreStatus}) =>{
         <TabPanel value={value} index={0}>
         
         <Grid container spacing={2}>
-              {libraryBooks && <BooksCollection buttonName='Finished' books={result} status={true} onClick={(id,status) => handleClick(id,status)} />}
+              {libraryBooks && <BooksCollection buttonName='Mark as Completed' books={result} status={true} onClick={(id,status) => handleClick(id,status)} />}
         </Grid>
        
         </TabPanel>

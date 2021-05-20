@@ -64,14 +64,14 @@ export default function TopTab() {
       </div>
       <AppBar position="static" elevation={0}>
         <Toolbar>   
-          <Logo onClick={()=>{window.location.reload()}}/>
-          <SearchIcon onClick={()=>{toggle(value)}}/>
+          <Logo/>
+          <SearchIcon title="searchIcon" onClick={()=>{toggle(value)}}/>
           { (value===0 || value===1) && <Menu parentMenuFunction={(val)=>{searchExplore(val)}}/>} 
           { (value===0 || value===1) && <div>
             <Button name='My Library' onClick={()=>{handleLibrary()}}/>
             <Button name='Add Book' onClick={()=>{setValue(1)}}/>
           </div>}
-          {(value===2) && <TextField placeholder="Search for titles, authors and Categories" onChange={(event)=>searchNew(event.target.value)}/>}
+          {(value===2) && <TextField placeholder="Search for titles, authors and Categories" value="" onChange={(event)=>searchNew(event.target.value.trim())}/>}
       </Toolbar>
       </AppBar>
       

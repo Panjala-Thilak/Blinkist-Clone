@@ -1,6 +1,8 @@
 import React from 'react'
-import { render,fireEvent, screen } from '@testing-library/react'
+import { render,fireEvent, screen, cleanup } from '@testing-library/react'
 import BookCard from './MediaCard'
+
+afterEach(cleanup)
 
 describe('The BookCard Testing', () => {
     const handleClick = jest.fn();

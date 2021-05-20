@@ -91,6 +91,7 @@ const CustomForm = ({variant,parentFunction}) => {
           headers: {
             "Content-type": "application/json; charset=UTF-8"
           }
+           // eslint-disable-next-line react-hooks/exhaustive-deps
         })
         parentFunction();
         window.location.reload();
@@ -104,13 +105,14 @@ const CustomForm = ({variant,parentFunction}) => {
         aria-labelledby="customized-dialog-title"
         open={open}
         >
-        <DialogTitle id="customized-dialog-title" onClose={handleClose}>
+        <DialogTitle id="customized-dialog-title"  onClose={handleClose}>
           Add Book
         </DialogTitle>
         <DialogContent dividers>
             <CustomInput variant={variant}
               label= "Title"
               type="text"
+              value=""
               onChange={event => setTitle(event.target.value)}
               placeholder="Enter Title" data-testid="title"
               />
@@ -119,13 +121,15 @@ const CustomForm = ({variant,parentFunction}) => {
               label= "Author"
               type="text"
               id="author"
+              value=""
               onChange={event => setAuthor(event.target.value)}
               placeholder="Enter Author Name"
               />
             <br/><br/>
             <CustomInput variant={variant}
               label= "Time"
-              type="text"
+              type="number"
+              value=""
               onChange={event => setTime(event.target.value)}
               placeholder="Time"
               />
@@ -137,6 +141,7 @@ const CustomForm = ({variant,parentFunction}) => {
                 id="demo-simple-select-outlined"
                 onChange={event => setCategory(event.target.value)}
                 label="Category"
+                placeholder="Category"
               >
               
                 <MenuItem value={"Entrepreneurship"}> Entrepreneurship</MenuItem>
