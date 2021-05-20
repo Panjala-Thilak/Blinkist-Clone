@@ -17,6 +17,7 @@ const BooksCollection = ({buttonName,books,libraryBooks,status,onClick}) => {
     }
       }
     let visible=true
+    // eslint-disable-next-line array-callback-return
     let allbooks = books.map((item) => {
         if(search(item.id))
         {
