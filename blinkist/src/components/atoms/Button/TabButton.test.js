@@ -10,9 +10,9 @@ describe('App', () => {
       const name = getByTestId('tabButton')
       expect(name.textContent).toBe('Click Me')
     })
-  })
+})
 
-  describe('checking the button click', () => {
+describe('checking the button click', () => {
     const handleClick = jest.fn();
    
     it('Checking the click',() => {
@@ -25,10 +25,10 @@ describe('App', () => {
 
     it('checking the function call',() => {
        render(<Button
-        name='Add Book'
+        name='Click'
             onClick={handleClick}
         />)
-        fireEvent.click(screen.getByText(/Add Book/i))
+        fireEvent.click(screen.getByText(/Click/i))
         expect(handleClick).toHaveBeenCalledTimes(1);
     })
 });

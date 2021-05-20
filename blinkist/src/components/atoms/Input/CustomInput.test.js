@@ -7,7 +7,7 @@ import { fireEvent, render } from '@testing-library/react'
 
 describe('checking the textfield', () => {
     const handleChange = jest.fn();
-    
+
     it('Checking the input value',() => {
 
         const {container} = render(<Input
@@ -20,8 +20,7 @@ describe('checking the textfield', () => {
 
     test("Checking the placeholder in input", () => {
         const {getByPlaceholderText} = render(<Input placeholder='Enter your Name'/>)
-        
-    getByPlaceholderText('Enter your Name')
+        getByPlaceholderText('Enter your Name')
 
     });
 })

@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from './CustomButton'
 
-import { fireEvent, render,queryByText, cleanup, screen, getAllByPlaceholderText, getByTestId } from '@testing-library/react'
+import { fireEvent, render, screen} from '@testing-library/react'
 
 
 describe('App', () => {
