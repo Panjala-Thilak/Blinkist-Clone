@@ -1,5 +1,5 @@
 import React from 'react'
-import { render, cleanup,fireEvent, screen, getAllByPlaceholderText, getByTestId } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import CustomForm from './CustomForm'
 
 describe('The Form Testing', () => {
