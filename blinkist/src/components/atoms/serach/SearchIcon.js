@@ -4,7 +4,7 @@ import Search from "@material-ui/icons/SearchSharp"
 const SearchIcon = ({onClick}) => {
     return ( 
         <div>
-             <IconButton onClick={onClick}>
+             <IconButton onClick={onClick} data-testId='search'>
                 <Search />
             </IconButton>
         </div>

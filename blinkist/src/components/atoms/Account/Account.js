@@ -26,7 +26,7 @@ const Account=({firstName,lastName})=> {
     const DisplayName = firstName[0]+lastName[0];
   return (
     <div className={classes.root}>
-      <Avatar className={classes.orange}>{DisplayName}</Avatar>
+      <Avatar className={classes.orange} data-testId='avatar'>{DisplayName}</Avatar>
     </div>
   );
 }

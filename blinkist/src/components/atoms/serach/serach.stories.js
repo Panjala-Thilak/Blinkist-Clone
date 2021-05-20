@@ -1,6 +1,6 @@
 
 import React from 'react';
-import Search from './serach';
+import Search from './SearchIcon';
 
 export default {
     title: 'atoms/Search',

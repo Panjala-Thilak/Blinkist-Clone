@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from './card';
+import Card from './MediaCard';
 
 export default {
     title: 'molecules/Cards',

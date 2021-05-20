@@ -6,7 +6,7 @@ export default function TabButtons({variant,color,name,onClick,endIcon}) {
 
   return (
       
-        <Button  onClick={onClick} endIcon={endIcon} color={color} variant={variant}>
+        <Button  onClick={onClick} endIcon={endIcon} color={color} variant={variant} data-testId='tabButton'>
           {name}
         </Button>
       
