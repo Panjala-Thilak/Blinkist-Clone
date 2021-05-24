@@ -43,28 +43,14 @@ describe('Tabs Tests', () => {
   it('check the buttom name', () => {
     const { result } = renderHook(Toptab);
     const{getByPlaceholderText}=render(<Toptab/>);
-    const searchElement = screen.getByTitle('searchIcon');
+    const searchElement = screen.getByRole('icon');
     console.log(searchElement);
     fireEvent.click(searchElement);
     getByPlaceholderText("Search for titles, authors and Categories");
     fireEvent.change(getByPlaceholderText("Search for titles, authors and Categories",{target:{value:"Pol"}}));
-
-    // const{getByPlaceholderText}=render(<Toptab/>);
-    // const searchElement = screen.getByTitle('searchIcon');
-    // console.log(searchElement);
-    // fireEvent.click(searchElement);
-    // getByPlaceholderText("Search for titles, authors and Categories");
-    // fireEvent.change(getByPlaceholderText("Search for titles, authors and Categories",{target:{value:"Pol"}}));
+    fireEvent.click(searchElement);
     
   });
-
-  // it('check the serachIcon Placeholder', () => {
-  //  const {getByPlaceholderText}=render(<Toptab/>);
-
-  //  getByPlaceholderText("Search for titles, authors and Categories");
-  //  fireEvent.click(searchElement);
-  // });
-
 
   test('Checking the Explore Menu',()=>{
     
@@ -72,10 +58,6 @@ describe('Tabs Tests', () => {
    
     fireEvent.click(screen.getByText('Explore'));
     fireEvent.click(screen.getByText('Health'));
-    // const explore=getByText('Explore');
-    // expect(explore).toBeTruthy();
-    // console.log(explore);
-    // fireEvent.click(explore);
   });
 
   });

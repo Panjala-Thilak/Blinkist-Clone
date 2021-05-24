@@ -161,6 +161,42 @@
       "time": "15",
       "status": true,
       "id": 18
+    },
+    {
+      "title": "title",
+      "author": "author",
+      "category": "Politics",
+      "time": "20",
+      "status": true,
+      "image": "https://images.blinkist.com/images/books/5aa7bb21b238e10007af44aa/1_1/470.jpg",
+      "id": 19
+    },
+    {
+      "title": "title",
+      "author": "author",
+      "category": "Politics",
+      "time": "20",
+      "status": true,
+      "image": "https://images.blinkist.com/images/books/5aa7bb21b238e10007af44aa/1_1/470.jpg",
+      "id": 20
+    },
+    {
+      "title": "title",
+      "author": "author",
+      "category": "Politics",
+      "time": "20",
+      "status": true,
+      "image": "https://images.blinkist.com/images/books/5aa7bb21b238e10007af44aa/1_1/470.jpg",
+      "id": 21
+    },
+    {
+      "title": "title",
+      "author": "author",
+      "category": "Politics",
+      "time": "20",
+      "status": true,
+      "image": "https://images.blinkist.com/images/books/5aa7bb21b238e10007af44aa/1_1/470.jpg",
+      "id": 22
     }
   ],
   "library": [
@@ -235,24 +271,6 @@
       "image": "https://images.blinkist.com/images/books/60701c7f6cee070007aad5a9/1_1/470.jpg",
       "category": "Motivation",
       "status": true
-    },
-    {
-      "id": 13,
-      "title": "The Motivation Myth",
-      "author": "Jeff Haden",
-      "time": "13",
-      "category": "Motivation",
-      "image": "https://images.blinkist.com/images/books/6082d1516cee0700072c7da1/1_1/470.jpg",
-      "status": true
-    },
-    {
-      "id": 11,
-      "title": "Get Better",
-      "author": "Todd Davis",
-      "time": "18",
-      "category": "Communcation skills",
-      "image": "https://images.blinkist.com/images/books/608a764b6cee070007228924/1_1/470.jpg",
-      "status": false
     }
   ]
 }

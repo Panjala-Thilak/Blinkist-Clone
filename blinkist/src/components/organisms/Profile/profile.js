@@ -27,7 +27,7 @@ const Profile=()=>{
   const anchorRef = React.useRef(null);
 
   const handleToggle = () => {
-    setOpen((prevOpen) => !prevOpen);
+    setOpen((prevOpened) => !prevOpened);
   };
 
   const handleClose = (event) => {

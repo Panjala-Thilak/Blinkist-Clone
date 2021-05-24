@@ -53,7 +53,25 @@ const CustomizedTabs=({searchValue,exploreStatus}) =>{
     "category": "Entrepreneurship",
     "image": "https://images.blinkist.com/images/books/60701b716cee070008b8b7a1/1_1/470.jpg",
     "status": true
-  });
+  },
+  {
+    "id": 6,
+    "title": "Forest Bathing",
+    "author": "Qing Li",
+    "time": "12",
+    "category": "Health",
+    "image": "https://images.blinkist.com/images/books/60950a3c6cee070007151f86/1_1/470.jpg",
+    "status": true
+  },
+  {
+    "id": 7,
+    "title": "The Pegan Diet",
+    "author": "Dr. Mark Hyman",
+    "time": "15",
+    "category": "Health",
+    "image": "https://images.blinkist.com/images/books/607d9d2c6cee070007991263/1_1/470.jpg",
+    "status": true
+  },);
   const [libraryBooks,setLibraryBooks]=useState( [
     {
       "id": 1,
@@ -112,11 +130,13 @@ const CustomizedTabs=({searchValue,exploreStatus}) =>{
     fetchAllBooks();
   }, []);
 
-  const search=(id,books)=>{
-    for (let i=0; i < books.length; i++) {
-        if (books[i].id === id) {
+  const search=(id,book)=>{
+    let i=0;
+    while(i < book.length) {
+        if (book[i].id === id) {
             return i;
         }
+        i=i+1;
     }
     return -1;
   };
@@ -163,18 +183,24 @@ const CustomizedTabs=({searchValue,exploreStatus}) =>{
 
   let resultFilter = [];
 
+  const findBook=(allBooks)=>{
+    let i=0;
+    while(i<allBooks.length)
+    {
+      if(allBooks[i].title.toLowerCase().indexOf(searchValue.toLowerCase())>-1||allBooks[i].author.toLowerCase().indexOf(searchValue.toLowerCase())>-1||allBooks[i].category.toLowerCase().indexOf(searchValue.toLowerCase())>-1)
+      {
+        resultFilter.push(allBooks[i]);
+      }
+      i=i+1;
+    }
+  };
+
   const searchBooks = (booksData) =>{
     
     if(booksData)
     {
       if(searchValue!=='' && searchValue){
-        for(let i=0;i<booksData.length;i++)
-        {
-          if(booksData[i].title.toLowerCase().indexOf(searchValue.toLowerCase())>-1||booksData[i].author.toLowerCase().indexOf(searchValue.toLowerCase())>-1||booksData[i].category.toLowerCase().indexOf(searchValue.toLowerCase())>-1)
-          {
-            resultFilter.push(booksData[i]);
-          }
-        }
+        findBook(booksData);
       }
       else{
         resultFilter=[...booksData];

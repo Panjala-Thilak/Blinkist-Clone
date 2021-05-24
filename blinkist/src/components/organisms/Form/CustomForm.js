@@ -75,7 +75,7 @@ const CustomForm = ({variant,parentFunction}) => {
     const handleSubmitClick=()=>{
 
 
-     
+    
         const tempBook = {
             title,author,category,time,status:true,image
         };
@@ -89,7 +89,6 @@ const CustomForm = ({variant,parentFunction}) => {
         });
         parentFunction();
         window.location.reload();
-     
     };
 
     return ( 

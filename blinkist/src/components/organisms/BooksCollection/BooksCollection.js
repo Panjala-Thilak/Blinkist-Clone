@@ -8,11 +8,13 @@ const BooksCollection = ({buttonName,books,libraryBooks,status,onClick}) => {
     console.log(books,libraryBooks);
     const search=(id)=>{
       if(libraryBooks){
-      for (let i=0; i < libraryBooks.length; i++) {
+        let i=0;
+      while( i < libraryBooks.length) {
         if (libraryBooks[i].id === id) {
           console.log("available");
             return true;
         }
+        i=i+1;
       }
     }
       };
