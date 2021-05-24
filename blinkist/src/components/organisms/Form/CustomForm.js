@@ -75,12 +75,7 @@ const CustomForm = ({variant,parentFunction}) => {
     const handleSubmitClick=()=>{
 
 
-      if(title.trim()==='' || author.trim()==='' || category.trim()==='' || time.trim==='')
-      {
-      alert("Please Enter all details");
-      }
-      else
-      {
+     
         const tempBook = {
             title,author,category,time,status:true,image
         };
@@ -94,7 +89,7 @@ const CustomForm = ({variant,parentFunction}) => {
         });
         parentFunction();
         window.location.reload();
-      }
+     
     };
 
     return ( 
