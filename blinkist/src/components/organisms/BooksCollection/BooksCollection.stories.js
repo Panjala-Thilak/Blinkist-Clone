@@ -12,7 +12,7 @@ export const Primary = Template.bind({});
 
 
 
-let books=[
+const books=[
     {
       "id": 1,
       "title": "Steve Jobs",
@@ -84,8 +84,8 @@ let books=[
       "category": "Education",
       "image": "https://images.blinkist.com/images/books/609155fc6cee070007ccb3ad/1_1/470.jpg",
       "status": true
-    }]
-let allLibraryBooks=[
+    }];
+const allLibraryBooks=[
     {
         "id": 5,
         "title": "Exercised",
@@ -113,11 +113,11 @@ let allLibraryBooks=[
         "image": "https://images.blinkist.com/images/books/607d9d2c6cee070007991263/1_1/470.jpg",
         "status": true
       }
-]
+];
 
 const handleClick=()=>{
-    console.log('Added To Library')
-}
+    console.log('Added To Library');
+};
 
 Primary.args = {
     books:books,

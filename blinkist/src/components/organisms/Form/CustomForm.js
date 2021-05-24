@@ -1,6 +1,6 @@
-import React,{ useState } from 'react'
-import CustomButton from '../../atoms/Button/TabButtons'
-import CustomInput from '../../atoms/Input/CustomInput'
+import React,{ useState } from 'react';
+import CustomButton from '../../atoms/Button/TabButtons';
+import CustomInput from '../../atoms/Input/CustomInput';
 import { withStyles } from "@material-ui/core/styles";
 import Dialog from "@material-ui/core/Dialog";
 import MuiDialogTitle from "@material-ui/core/DialogTitle";
@@ -67,23 +67,23 @@ const CustomForm = ({variant,parentFunction}) => {
     parentFunction();
     setOpen(false);
   };
-    const [title, setTitle] = useState('')
-    const [author, setAuthor] = useState('')
-    const [time, setTime] = useState('')
-    const [category, setCategory] = useState('')
-    const image="https://images.blinkist.com/images/books/5aa7bb21b238e10007af44aa/1_1/470.jpg"
+    const [title, setTitle] = useState('');
+    const [author, setAuthor] = useState('');
+    const [time, setTime] = useState('');
+    const [category, setCategory] = useState('');
+    const image="https://images.blinkist.com/images/books/5aa7bb21b238e10007af44aa/1_1/470.jpg";
     const handleSubmitClick=()=>{
 
 
       if(title.trim()==='' || author.trim()==='' || category.trim()==='' || time.trim==='')
       {
-      alert("Please Enter all details")
+      alert("Please Enter all details");
       }
       else
       {
-        var tempBook = {
+        const tempBook = {
             title,author,category,time,status:true,image
-        }
+        };
       
         fetch('http://localhost:8086/books/', {
           method: 'POST',
@@ -91,12 +91,11 @@ const CustomForm = ({variant,parentFunction}) => {
           headers: {
             "Content-type": "application/json; charset=UTF-8"
           }
-           // eslint-disable-next-line react-hooks/exhaustive-deps
-        })
+        });
         parentFunction();
         window.location.reload();
       }
-    }
+    };
 
     return ( 
       <React.Fragment>
@@ -170,7 +169,7 @@ const CustomForm = ({variant,parentFunction}) => {
       </Dialog>
     </React.Fragment>
      );
-}
+};
  
 export default CustomForm;
 

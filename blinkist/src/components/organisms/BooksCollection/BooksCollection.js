@@ -1,24 +1,24 @@
 import React from 'react';
-import Card from '../../molecules/Card/MediaCard'
-import Grid from '@material-ui/core/Grid'
+import Card from '../../molecules/Card/MediaCard';
+import Grid from '@material-ui/core/Grid';
 
 const BooksCollection = ({buttonName,books,libraryBooks,status,onClick}) => {
-    console.log(buttonName,books);
+    console.log(libraryBooks);
     // eslint-disable-next-line array-callback-return
-    console.log(books,libraryBooks)
+    console.log(books,libraryBooks);
     const search=(id)=>{
       if(libraryBooks){
-      for (var i=0; i < libraryBooks.length; i++) {
+      for (let i=0; i < libraryBooks.length; i++) {
         if (libraryBooks[i].id === id) {
           console.log("available");
             return true;
         }
       }
     }
-      }
-    let visible=true
+      };
+    let visible=true;
     // eslint-disable-next-line array-callback-return
-    let allbooks = books.map((item) => {
+    const allbooks = books.map((item) => {
         if(search(item.id))
         {
           visible=false;
@@ -27,14 +27,16 @@ const BooksCollection = ({buttonName,books,libraryBooks,status,onClick}) => {
           visible=true;
         }
         if (item.status === status)
+        {
           return (
             <Grid item xs={12} md={4} sm={6}>
               {console.log(item,visible)}
               <Card buttonName={buttonName} title={item.title} author={item.author} category={item.category} time={item.time} image={item.image} onClick={()=>onClick(item.id,status)} visible={visible} />
             </Grid>
-          )
+          );
+        }
     }
-      )
+      );
 
   return ( 
       
@@ -43,6 +45,6 @@ const BooksCollection = ({buttonName,books,libraryBooks,status,onClick}) => {
       </Grid>
   
    );
-}
+};
 
 export default BooksCollection;

@@ -5,7 +5,7 @@ import Button from '../../atoms/Button/TabButtons';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import { Grid, ListItem, ListItemIcon } from '@material-ui/core';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRocket ,faLandmark,faFlask,faGraduationCap,faLightbulb,faComment,faHeartbeat, faHeart, faGlobeAsia}  from '@fortawesome/free-solid-svg-icons';
 import { withStyles } from '@material-ui/core/styles';
 
@@ -54,7 +54,7 @@ export default function CustomizedMenu({parentMenuFunction}) {
     {
     setExpand(0);
     }
-  }
+  };
   const handleClick = (event) => {
     
     setAnchorEl(event.currentTarget);
@@ -69,7 +69,7 @@ export default function CustomizedMenu({parentMenuFunction}) {
   const search=(value)=>{
     console.log(value);
     parentMenuFunction(value);
-  }
+  };
   
   return (
     <div>

@@ -7,7 +7,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import CustomButton from '../../atoms/Button/CustomButton';
-import TimeIcon from '@material-ui/icons/AccessTime'
+import TimeIcon from '@material-ui/icons/AccessTime';
 import { ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
 
 const useStyles = makeStyles({
@@ -51,6 +51,6 @@ const MediaCard=({title,author,category,time,buttonName,onClick,image,visible}) 
       </CardActions> }
     </Card>
   );
-}
+};
 
 export default MediaCard;

@@ -5,8 +5,9 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import Grid from '@material-ui/core/Grid'
-import BooksCollection from '../BooksCollection/BooksCollection'
+import Grid from '@material-ui/core/Grid';
+import BooksCollection from '../BooksCollection/BooksCollection';
+import { LiveTvOutlined } from '@material-ui/icons';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -36,98 +37,141 @@ TabPanel.propTypes = {
 
 const CustomizedTabs=({searchValue,exploreStatus}) =>{
 
-  const [books,setBooks] =useState(null);
-  const [libraryBooks,setLibraryBooks]=useState(null);
+  const [books,setBooks] =useState( {
+    "id": 1,
+    "title": "Steve Jobs",
+    "author": "Walter Isaacson",
+    "time": "20",
+    "category": "Entrepreneurship",
+    "image": "https://images.blinkist.com/images/books/608a9c296cee070007228a21/1_1/470.jpg",
+    "status": true
+  },
+  {
+    "id": 2,
+    "title": "Dropshipping",
+    "author": "James Moore",
+    "time": "20",
+    "category": "Entrepreneurship",
+    "image": "https://images.blinkist.com/images/books/60701b716cee070008b8b7a1/1_1/470.jpg",
+    "status": true
+  });
+  const [libraryBooks,setLibraryBooks]=useState( [
+    {
+      "id": 1,
+      "title": "Steve Jobs",
+      "author": "Walter Isaacson",
+      "time": "20",
+      "category": "Entrepreneurship",
+      "image": "https://images.blinkist.com/images/books/608a9c296cee070007228a21/1_1/470.jpg",
+      "status": true
+    },
+    {
+      "id": 3,
+      "title": "The Bully Pulpit",
+      "author": "Goodwin",
+      "time": "19",
+      "category": "Politics",
+      "image": "https://images.blinkist.com/images/books/608aa9b16cee070007228a70/1_1/250.jpg",
+      "status": false
+    },
+    {
+      "id": 4,
+      "title": "Genesis",
+      "author": "Guido Tonelli",
+      "time": "12",
+      "category": "Science",
+      "image": "https://images.blinkist.com/images/books/608bcaf36cee07000722912e/1_1/470.jpg",
+      "status": true
+    }]);
   const [value, setValue] = React.useState(0);
   
-  const fetchAllBooks=()=>{
-    fetch('http://localhost:8086/books')
+  const  fetchAllBooks=async()=>{
+    await fetch('http://localhost:8086/books')
       .then(res => {
-        return res.json()
+        return res.json();
       })
       .then(data => {
         setBooks(data);
-      })
-  }
+      });
+  };
 
-  const fetchData=()=>{
-    fetch('http://localhost:8086/library')
+  const fetchData=async()=>{
+    await fetch('http://localhost:8086/library')
       .then(res => {
-        return res.json()
+        return res.json();
       })
       .then(data => {
         setLibraryBooks(data);
-      })
-  }
+      });
+  };
 
   useEffect(() => {
     fetchData();
-  }, [])
+  }, []);
 
   useEffect(() => {
     fetchAllBooks();
-  }, [])
+  }, []);
 
   const search=(id,books)=>{
-    for (var i=0; i < books.length; i++) {
+    for (let i=0; i < books.length; i++) {
         if (books[i].id === id) {
             return i;
         }
     }
     return -1;
-  }
+  };
 
 
-  const  handleClick= (id,status) => {
+  const  handleClick= async(id,status) => {
 
-      let identity=search(id,libraryBooks)
+      const identity=search(id,libraryBooks);
       libraryBooks[identity].status=!status;
 
-      fetch('http://localhost:8086/library/' + id, {
+      await fetch('http://localhost:8086/library/' + id, {
         method: 'PUT',
         headers: {
           "Content-type": "application/json; charset=UTF-8"
         },
         body: JSON.stringify(libraryBooks[identity])
-      })
+      });
 
       fetchData();
-  }
+  };
 
-  const  addLibraryClick= (id) => {
+  const  addLibraryClick= async (id) => {
 
-    let identity=search(id,libraryBooks)
+    const identity=search(id,libraryBooks);
     
     if(identity===-1)
     {
       const i=search(id,books);
 
-      fetch('http://localhost:8086/library/', {
+      await fetch('http://localhost:8086/library/', {
       method: 'POST',
       body: JSON.stringify(books[i]),
       headers: {
         "Content-type": "application/json; charset=UTF-8"
       }
-      })
+      });
     }
     fetchData();
-
-  }
+  };
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
-  var resultFilter = [];
+  let resultFilter = [];
+
   const searchBooks = (booksData) =>{
     
     if(booksData)
     {
       if(searchValue!=='' && searchValue){
-        searchValue=searchValue.toLowerCase();
-        for(var i=0;i<booksData.length;i++)
+        for(let i=0;i<booksData.length;i++)
         {
-          if(booksData[i].title.toLowerCase().indexOf(searchValue)>-1||booksData[i].author.toLowerCase().indexOf(searchValue)>-1||booksData[i].category.toLowerCase().indexOf(searchValue)>-1)
+          if(booksData[i].title.toLowerCase().indexOf(searchValue.toLowerCase())>-1||booksData[i].author.toLowerCase().indexOf(searchValue.toLowerCase())>-1||booksData[i].category.toLowerCase().indexOf(searchValue.toLowerCase())>-1)
           {
             resultFilter.push(booksData[i]);
           }
@@ -138,9 +182,9 @@ const CustomizedTabs=({searchValue,exploreStatus}) =>{
       }
     }
     return resultFilter;
-  }
+  };
 
-  var result;
+  let result;
   if(exploreStatus)
   {
     result = searchBooks(books);
@@ -149,6 +193,7 @@ const CustomizedTabs=({searchValue,exploreStatus}) =>{
   {
     result = searchBooks(libraryBooks);
   }
+
 
   return (
     <React.Fragment>
@@ -195,7 +240,7 @@ const CustomizedTabs=({searchValue,exploreStatus}) =>{
     }
   </React.Fragment>
   );
-}
+};
 
 
 export default CustomizedTabs;

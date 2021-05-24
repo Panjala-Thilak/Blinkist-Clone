@@ -1,5 +1,5 @@
 import { createMuiTheme, responsiveFontSizes } from "@material-ui/core/styles";
-import "@fontsource/raleway"
+import "@fontsource/raleway";
 
 const defaultTheme = createMuiTheme();
 

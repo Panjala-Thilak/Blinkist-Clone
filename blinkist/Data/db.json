@@ -189,7 +189,7 @@
       "time": "19",
       "category": "Politics",
       "image": "https://images.blinkist.com/images/books/608aa9b16cee070007228a70/1_1/250.jpg",
-      "status": false
+      "status": true
     },
     {
       "id": 5,
@@ -198,7 +198,7 @@
       "time": "13",
       "category": "Science",
       "image": "https://images.blinkist.com/images/books/60507e296cee070007c4dc7e/1_1/470.jpg",
-      "status": true
+      "status": false
     },
     {
       "title": "Fear",
@@ -252,7 +252,7 @@
       "time": "18",
       "category": "Communcation skills",
       "image": "https://images.blinkist.com/images/books/608a764b6cee070007228924/1_1/470.jpg",
-      "status": true
+      "status": false
     }
   ]
 }

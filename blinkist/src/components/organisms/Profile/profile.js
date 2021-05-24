@@ -1,4 +1,4 @@
-import { useAuth0 } from "@auth0/auth0-react"
+import { useAuth0 } from "@auth0/auth0-react";
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
@@ -86,7 +86,7 @@ const Profile=()=>{
         </Popper>
         </div>
     )
-    )
-}
+    );
+};
 
-export default Profile
+export default Profile;

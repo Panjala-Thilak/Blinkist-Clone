@@ -1,31 +1,31 @@
 import React, { useState } from 'react';
 import Button from '../../atoms/Button/TabButtons';
-import Menu from '../Menu/CustomizedMenu'
-import Form from '../Form/CustomForm'
+import Menu from '../Menu/CustomizedMenu';
+import Form from '../Form/CustomForm';
 import CustomizedTabs from '../Tabs/CustomizedTabs';
 import Logo from '../../atoms/Logo/logo';
 import { AppBar, Container, Toolbar } from '@material-ui/core';
-import SearchIcon from '../../atoms/serach/SearchIcon'
-import TextField from '../../atoms/Input/CustomInput'
+import SearchIcon from '../../atoms/serach/SearchIcon';
+import TextField from '../../atoms/Input/CustomInput';
 import LoginButton from '../Login/LoginButton';
 import Profile from '../Profile/profile';
   
 export default function TopTab() {
 
   const [value,setValue]=useState(0);
-  const [searchValue,setSearchValue]=useState('')
-  const [statusValue,setStatusValue]=useState(false)
+  const [searchValue,setSearchValue]=useState('');
+  const [statusValue,setStatusValue]=useState(false);
 
   const handleData=()=>{
   console.log("handledata");
    setValue(0);
-  }
+  };
 
   const handleLibrary=()=>{
      setValue(0);
      setSearchValue('');
      setStatusValue(false);
-    }
+    };
 
 
 
@@ -39,21 +39,17 @@ export default function TopTab() {
     {
     setValue(2);
     }
-  }
+  };
 
   const searchNew=(val)=>{
-    console.log(val);
-    console.log("hello");
     setStatusValue(false);
     setSearchValue(val);
-  }
+  };
 
   const searchExplore=(val)=>{
-    console.log(val);
-    console.log("hello");
     setStatusValue(true);
     setSearchValue(val);
-  }
+  };
  
   return (
 
@@ -65,11 +61,11 @@ export default function TopTab() {
       <AppBar position="static" elevation={0}>
         <Toolbar>   
           <Logo/>
-          <SearchIcon title="searchIcon" onClick={()=>{toggle(value)}}/>
-          { (value===0 || value===1) && <Menu parentMenuFunction={(val)=>{searchExplore(val)}}/>} 
+          <SearchIcon title="searchIcon" onClick={()=>{toggle(value);}}/>
+          { (value===0 || value===1) && <Menu parentMenuFunction={(val)=>{searchExplore(val);}}/>} 
           { (value===0 || value===1) && <div>
-            <Button name='My Library' onClick={()=>{handleLibrary()}}/>
-            <Button name='Add Book' onClick={()=>{setValue(1)}}/>
+            <Button name='My Library' onClick={()=>{handleLibrary();}}/>
+            <Button name='Add Book' onClick={()=>{setValue(1);}}/>
           </div>}
           {(value===2) && <TextField placeholder="Search for titles, authors and Categories" value="" onChange={(event)=>searchNew(event.target.value.trim())}/>}
       </Toolbar>
@@ -79,8 +75,7 @@ export default function TopTab() {
       <Container maxWidth="md">
       <div>
       {(value===1 || value===2 || value===0) &&<CustomizedTabs searchValue={searchValue} exploreStatus={statusValue}/>}
-      {(value===1 || value===2 || value===0) && console.log("hello")}
-      {value===1 && <Form variant="outlined" parentFunction={()=>{handleData()}}/>}
+      {value===1 && <Form variant="outlined" parentFunction={()=>{handleData();}}/>}
       </div>
     </Container>
     </React.Fragment>

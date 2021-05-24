@@ -1,16 +1,18 @@
 import React from 'react';
-import Menu from './CustomizedMenu'
+import Menu from './CustomizedMenu';
 
-import { cleanup, fireEvent, render, screen } from '@testing-library/react'
+import { cleanup, fireEvent, render, screen } from '@testing-library/react';
 
-afterEach(cleanup)
+afterEach(cleanup);
 
 describe('Explore Menu Test', () => {
 
+    const onChange=jest.fn;
+
     test('renders Explore component', () =>  {
-        render(<Menu />);
-        const button = screen.getByText('Explore')
-        fireEvent.click(button)
+        render(<Menu parentMenuFunction={onChange}/>);
+        const button = screen.getByText('Explore');
+        fireEvent.click(button);
         expect(screen.getByText('Politics')).toBeInTheDocument();
         fireEvent.click(screen.getByText('Politics'));
         fireEvent.click(screen.getByText('Entrepreneurship'));
@@ -22,4 +24,4 @@ describe('Explore Menu Test', () => {
         fireEvent.click(screen.getByText('Communcation skills'));
         fireEvent.click(screen.getByText('Relationships'));
     });    
-  })
+  });
