@@ -3,5 +3,5 @@ projectKey=Panjala-Thilak_Blinkist-Clone2
 serverUrl=https://sonarcloud.io
 serverVersion=8.0.0.20278
 dashboardUrl=https://sonarcloud.io/dashboard?id=Panjala-Thilak_Blinkist-Clone2
-ceTaskId=AXmeCR7sNwpZ6Sf2VsK5
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AXmeCR7sNwpZ6Sf2VsK5
+ceTaskId=AXmeGSfdsVgYE8NtD-c0
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AXmeGSfdsVgYE8NtD-c0

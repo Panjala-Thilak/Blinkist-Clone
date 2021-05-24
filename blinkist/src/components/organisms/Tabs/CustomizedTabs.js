@@ -7,7 +7,6 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import BooksCollection from '../BooksCollection/BooksCollection';
-import { LiveTvOutlined } from '@material-ui/icons';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
